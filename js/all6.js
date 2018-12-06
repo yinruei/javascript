@@ -16,3 +16,13 @@ document.getElementById('countId').onclick = function(){
 // var tom = getHamPrice(20);
 // var John= getHamPrice(50);
 // console.log(john);
+
+function count(price){
+    return addTax(price*0.8);
+}
+
+function addTax(price){
+    return price*1.1;
+}
+
+console.log(count(500));
