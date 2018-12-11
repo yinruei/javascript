@@ -14,5 +14,6 @@ function getPosition(e) {
   clientY.textContent = e.clientY;                  
 }
 
-var el = document.body;      
+var el = document.body;
+console.log(el);
 el.addEventListener('mousemove', getPosition, false); 
