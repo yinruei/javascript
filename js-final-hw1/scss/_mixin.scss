@@ -1,0 +1,15 @@
+@mixin clearfix {
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+@mixin hide-text {
+	text-indent: 101%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+
