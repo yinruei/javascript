@@ -2602,8 +2602,9 @@ var data = [
     }
 ]
 
-//DOM元素
-var datalength = data.length;
+
+// 指定DOM
+var dataLen = data.length;
 var select = document.getElementById('selectDistrict');
 var list = document.querySelector('.list');
 var hotZone1 = document.querySelector('.hotZone1');
@@ -2611,30 +2612,48 @@ var hotZone2 = document.querySelector('.hotZone2');
 var hotZone3 = document.querySelector('.hotZone3');
 var hotZone4 = document.querySelector('.hotZone4');
 
-//icon設定
+// icon設定
 var timeIcon = 'images/icons_clock.png';
 var locateIcon = 'images/icons_pin.png';
 var phoneIcon = 'images/icons_phone.png';
 
 
-//監聽與更新
+
+// 監聽與更新
 select.addEventListener('change',changeDistrict,false);
 hotZone1.addEventListener('click',changeDistrict,false);
-hotZone2.addEventListener('click',changeDistrict,false);
-hotZone3.addEventListener('click',changeDistrict,false);
-hotZone4.addEventListener('click',changeDistrict,false);
+hotZone2.addEventListener('click', changeDistrict, false);
+hotZone3.addEventListener('click', changeDistrict, false);
+hotZone4.addEventListener('click', changeDistrict, false);
 
-
-//更新景點內容
-function changeDistrict(e){
+// 更新景點內容
+function changeDistrict(e) {
     var district = e.target.value;
-    var title = document.querySelector('.title ')
+    var title = document.querySelector('.title');
     var zoneList = '';
     title.textContent = district;
-    for(var i = 0; i < datalength; i++){
+    for(var i = 0; i < dataLen; i++){
         if (district == data[i].Zone){
             zoneList += '<li><img src="' + data[i].Picture1 + '" alt="image"><span class="hotZoneName">' + data[i].Name + '</span><div class="info"><p class="time"><img src="'+ timeIcon +'">' + data[i].Opentime + '</p><p class="location"><img src="'+ locateIcon +'">' + data[i].Add + '</p><p class="contact"><img src="'+ phoneIcon +'">' + data[i].Tel +'</p></div></li>'
         }
     }
     list.innerHTML = zoneList;
 }
+
+
+// go-top jQ效果
+
+$(document).ready(function(){
+    
+    $('.goTop').click(function(e){
+        e.preventDefault();
+        $('html, body').animate({
+            scrollTop: 0,
+        },700);
+    });
+
+
+
+});
+
+
