@@ -2633,7 +2633,10 @@ function changeDistrict(e){
     title.textContent = district;
     for(var i = 0; i < datalength; i++){
         if (district == data[i].Zone){
-            zoneList += '<li><img src="' + data[i].Picture1 + '" alt="image"><span class="hotZoneName">' + data[i].Name + '</span><div class="info"><p class="time"><img src="'+ timeIcon +'">' + data[i].Opentime + '</p><p class="location"><img src="'+ locateIcon +'">' + data[i].Add + '</p><p class="contact"><img src="'+ phoneIcon +'">' + data[i].Tel +'</p></div></li>'
+            zoneList += '<li><img src="' + data[i].Picture1 + '" alt="image"><span class="hotZoneName">'
+             + data[i].Name + '</span><div class="info"><p class="time"><img src="'+ timeIcon +'">' 
+             + data[i].Opentime + '</p><p class="location"><img src="'+ locateIcon +'">' + data[i].Add +
+              '</p><p class="contact"><img src="'+ phoneIcon +'">' + data[i].Tel +'</p></div></li>'
         }
     }
     list.innerHTML = zoneList;

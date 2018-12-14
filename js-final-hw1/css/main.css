@@ -105,6 +105,47 @@ footer, header, hgroup, menu, nav, section {
   background-color: #559AC8; }
 
 
+.content {
+  padding: 50px 0; }
+  .content .title {
+    font-size: 36px;
+    margin-bottom: 30px; }
+  .content .list:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .content .list img {
+    display: block;
+    width: 100%;
+    height: 347px; }
+  .content .list li {
+    position: relative;
+    float: left;
+    width: 50%;
+    padding: 0 8px;
+    margin-bottom: 25px; }
+  .content .list span {
+    position: absolute;
+    left: 20px;
+    top: 62%;
+    font-size: 24px;
+    color: #fff; }
+  .content .list .info {
+    padding: 10px 15px;
+    background-color: #fff;
+    height: 140px;
+    line-height: 30px;
+    -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2); }
+    .content .list .info img {
+      position: relative;
+      margin-right: 4px;
+      width: 18px;
+      height: 18px;
+      display: inline-block;
+      top: 5px; }
+  
+
 
 
 
