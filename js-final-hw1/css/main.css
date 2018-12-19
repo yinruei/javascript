@@ -26,7 +26,25 @@ footer, header, hgroup, menu, nav, section {
 /* .box {
     width: 100%;
   } */
-.banner {
+* {
+  box-sizing: border-box;
+}
+body {
+  position: relative;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+.container {
+  max-width: 930px;
+  margin: 0 auto;
+}
+.text-center {
+  text-align: center;
+}
+
+.header {
     width: 100%;
     height: 400px;
     background-image: url('../images/Hero.png');
@@ -34,12 +52,19 @@ footer, header, hgroup, menu, nav, section {
     background-position: center center;
     background-repeat: no-repeat;
   }
+.header .container {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 .header h1 {
   margin-bottom: 30px;
   text-align: center;
   font-size: 60px;
   color: #fff;
-  letter-spacing: 10px;}
+  letter-spacing: 10px;
+}
 
   .header select {
     display: block;
@@ -64,10 +89,15 @@ footer, header, hgroup, menu, nav, section {
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2); }
 .hot-spot ul {
   margin: 0 auto;
-  padding-left: 15px; 
+  padding-left: 0; 
+  list-style: none;
+}
+
+.hot-spot ul:after {
   content: "";
   display: table;
-  clear: both; }
+  clear: both;  
+}
 
 .hot-spot li {
   float: left;
@@ -76,16 +106,20 @@ footer, header, hgroup, menu, nav, section {
 
   .hot-spot li input {
     padding: 7px 10px;
-    color:black;
+    /* color:black; */
+    color: #fff;
+    font-size: 20px;
     border: none;
     border-radius: 5px;
-    cursor: pointer; }
+    cursor: pointer; 
+  }
 
 .hot-spot h2{
   position: relative;
-  top: -10px;
+  margin-bottom: 1rem;
+  /* top: -10px; */
   font-size: 18px;
-  text-align: center;
+  /* text-align: center; */
 }
 
 .hot-spot a {
@@ -166,3 +200,15 @@ footer, header, hgroup, menu, nav, section {
   .footer p {
     font-size: 14px;
     color: #FFD366; }
+
+
+.goTop {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+}
+.goTop a {
+  display: block;
+}
+
+
