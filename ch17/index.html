@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="list">
+    <li>
+        <img src="logo.png">
+    </li>
+    </ul>
+    <script>
+        // var li = '<li><img src='+ img +'></li>;
+        const list = document.querySelector('.list');
+        const imgUrl = 'logo.png';
+        const title = "雲灣資訊";
+        const product = "天氣資訊系統"
+        // list.innerHTML = '<li><img src='+ imgUrl +'></li>';
+        list.innerHTML = `<li><h1>${title}</h1><h2>${product}</h2><img src="${imgUrl}"</li>`
+    </script>
+</body>
+</html>

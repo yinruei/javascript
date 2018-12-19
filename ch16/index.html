@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //盡量避免汙染全域變數
+        //let、const，為什麼要交這個?因為我們要盡量得避免汙染到全域變數，以至於無法跟其他開發者合併程式碼時會衝突
+        //所以才需要學這兩個東西
+        var a = 1;
+        console.log(a);
+        for (var i = 0; i<3; i++){
+            console.log(i);
+        }
+    </script>
+</body>
+</html>

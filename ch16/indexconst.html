@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //let與const用來宣告區塊裡的變數
+        //區塊={        }
+        //const 唯讀變數 - 不能去做修改
+        // 變數是不能被變更 - url網址
+        // {} []
+        const a = 1;
+        // a = 2;//因為const不能被修改，所以這行會出錯
+        console.log(a);
+
+        const obj = {
+            url: 'http://xx.com'
+        };
+        obj.url ='x'
+        Object.freeze(obj);//凍結裡面的內容
+        console.log(obj.url);
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="list">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <script>
+        const listLen = document.querySelectorAll('.list li').length;
+        for (let i =0; i<listLen; i++) {
+            // console.log(i);
+            document.querySelectorAll('.list li')[i]
+            .addEventListener('click', function() {
+                alert(i + 1);
+            })
+        }
+    </script>
+</body>
+</html>
