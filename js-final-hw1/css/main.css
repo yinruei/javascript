@@ -37,7 +37,7 @@ ul {
   padding: 0;
 }
 .container {
-  max-width: 930px;
+  max-width: 960px;
   margin: 0 auto;
 }
 .text-center {
@@ -179,13 +179,6 @@ ul {
       display: inline-block;
       top: 5px; }
   
-
-
-
-
-
-
-
 .footer {
   padding: 25px 0;
   background-color: #559AC8; }
