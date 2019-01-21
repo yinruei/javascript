@@ -1,65 +1,66 @@
 ////原生ajax寫法
 
-var regist = document.querySelector('.register');
-regist.addEventListener('click',signup,false);
+// var regist = document.querySelector('.register');
+// regist.addEventListener('click',signup,false);
 
-function signup(){
-    var emailStr = document.querySelector('.account').value;
-    var passwordStr = document.querySelector('.password').value;
-    var account = {};
-    account.email = emailStr;
-    account.password = passwordStr;
+// function signup(){
+//     var emailStr = document.querySelector('.account').value;
+//     var passwordStr = document.querySelector('.password').value;
+//     var account = {};
+//     account.email = emailStr;
+//     account.password = passwordStr;
 
-    var xhr = new XMLHttpRequest();
-    xhr.open('post','https://hexschool-tutorial.herokuapp.com/api/signup',true);
-    xhr.setRequestHeader('Content-type','application/json');
-    var data = JSON.stringify(account);  // {}==>"{}"
-    // console.log(typeof(data))
-    xhr.send(data)
+//     var xhr = new XMLHttpRequest();
+//     xhr.open('post','https://hexschool-tutorial.herokuapp.com/api/signup',true);
+//     xhr.setRequestHeader('Content-type','application/json');
+//     var data = JSON.stringify(account);  // {}==>"{}"
+//     // console.log(typeof(data))
+//     xhr.send(data)
 
-    xhr.onload = function(){
-        // console.log(xhr);
-        var callbackData = JSON.parse(xhr.responseText);  //"[{}]" ==>>[{}]
-        console.log(callbackData);
-        var verify = callbackData.message;
-        if (verify == '帳號註冊成功'){
-            alert('帳號註冊成功!!!');
-        }else{
-            alert('此帳號已被使用!!');
-        }
-    }
-}
+//     xhr.onload = function(){
+//         // console.log(xhr);
+//         var callbackData = JSON.parse(xhr.responseText);  //"[{}]" ==>>[{}]
+//         console.log(callbackData);
+//         var verify = callbackData.message;
+//         if (verify == '帳號註冊成功'){
+//             alert('帳號註冊成功!!!');
+//         }else{
+//             alert('此帳號已被使用!!');
+//         }
+//     }
+// }
 
-var login = document.querySelector('.login');
-login.addEventListener('click',signin,false);
+// var login = document.querySelector('.login');
+// login.addEventListener('click',signin,false);
 
-function signin(){
-    var emailStr = document.querySelector('.account').value;
-    var passwordStr = document.querySelector('.password').value;
-    var account = {};
-    account.email = emailStr;
-    account.password = passwordStr;
+// function signin(){
+//     var emailStr = document.querySelector('.account').value;
+//     var passwordStr = document.querySelector('.password').value;
+//     var account = {};
+//     account.email = emailStr;
+//     account.password = passwordStr;
 
-    var xhr = new XMLHttpRequest();
-    xhr.open('post','https://hexschool-tutorial.herokuapp.com/api/signin',true);
-    xhr.setRequestHeader('Content-type','application/json');
-    var data = JSON.stringify(account);
-    xhr.send(data)
+//     var xhr = new XMLHttpRequest();
+//     xhr.open('post','https://hexschool-tutorial.herokuapp.com/api/signin',true);
+//     xhr.setRequestHeader('Content-type','application/json');
+//     var data = JSON.stringify(account);
+//     xhr.send(data)
 
-    xhr.onload = function(){
-        console.log(xhr);
-        var callbackData = JSON.parse(xhr.responseText);
-        console.log(callbackData);
-        var verify = callbackData.message;
-        if (verify == '登入成功'){
-            alert('登入成功!!!');
-        }else{
-            alert('此帳號不存在或帳號密碼錯誤');
-        }
-    }
-}
+//     xhr.onload = function(){
+//         console.log(xhr);
+//         var callbackData = JSON.parse(xhr.responseText);
+//         console.log(callbackData);
+//         var verify = callbackData.message;
+//         if (verify == '登入成功'){
+//             alert('登入成功!!!');
+//         }else{
+//             alert('此帳號不存在或帳號密碼錯誤');
+//         }
+//     }
+// }
 
 //fetch寫法
+//註冊
 let regist = document.querySelector('.register');
 regist.addEventListener('click',signup,false);
 
@@ -69,7 +70,6 @@ function signup(){
     let account = {};
     account.email = emailStr;
     account.password = passwordStr;
-    console.log(account)
 
     let url_up = 'https://hexschool-tutorial.herokuapp.com/api/signup';
     fetch(url_up, {
@@ -92,16 +92,16 @@ function signup(){
         })
     }
 
-const login = document.querySelector('.login');
+//登入
+let login = document.querySelector('.login');
 login.addEventListener('click',signin,false);
 
 function signin(){
-    const emailStr = document.querySelector('.account').value;
-    const passwordStr = document.querySelector('.password').value;
-    const account = {};
+    let emailStr = document.querySelector('.account').value;
+    let passwordStr = document.querySelector('.password').value;
+    let account = {};
     account.email = emailStr;
     account.password = passwordStr;
-    console.log(account)
 
     let url_in = 'https://hexschool-tutorial.herokuapp.com/api/signin';
     fetch(url_in, {
