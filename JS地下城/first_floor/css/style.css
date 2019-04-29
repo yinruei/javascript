@@ -1,0 +1,7 @@
+.fixed-bottom{
+    background: #2EB738;
+}
+.fixed-bottom .container p{
+    text-align: right;
+    color: #ffffff;
+}
